@@ -35,7 +35,7 @@ with col1:
 with col2:
    st.header("暖冷房期間")
    st.image(img1)
-
+st.title('あなたの住まいの省エネ区分と日射区分')
 
 
 
