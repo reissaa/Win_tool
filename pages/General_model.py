@@ -73,7 +73,7 @@ with col2:
    st.header("暖房期間の日射量")
    st.image(img_2H)
 img3=Image.open(Rf"png/暖冷房スケジュール.png")
-img4=Image.open(Rf"png/暖房冷房　設定温度.png")
+img4=Image.open(Rf"png/暖房冷房設定温度.png")
 with col3:
    st.header("暖冷房スケジュール")
    st.image(img3)
