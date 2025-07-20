@@ -1,0 +1,55 @@
+import streamlit as st
+import pandas as pd
+import numpy as np
+from math import pi
+import matplotlib.pyplot as plt
+import folium
+from streamlit_folium import folium_static
+import plotly.express as px
+import altair as alt
+from PIL import Image
+import os
+st.set_page_config(
+    page_title='Multipage App',
+    page_icon='🗾',
+    layout='wide',
+)
+st.title('🪟Window Energy Performance')
+st.title('Plan1')
+location=os.listdir(R'Win_tool_47')
+select_location =st.sidebar.selectbox('地域を選択してください', location)
+S_area = st.sidebar.slider("南面の窓面積を入力", 0, 40, 25)
+E_area = st.sidebar.slider("東面の窓面積を入力", 0, 40, 25)
+N_area = st.sidebar.slider("北面の窓面積を入力", 0, 40, 25)
+W_area = st.sidebar.slider("西面の窓面積を入力", 0, 40, 25)
+col1, col2, col3, col4,col5 = st.columns(5)
+with col1:
+    st.title('方位ごとの窓面積の割合')
+    color=['crimson','darkorange','blue','darkgreen']
+    fig, ax = plt.subplots()
+    rate=[S_area,E_area,N_area,W_area]
+    ax.pie(rate,colors=color,startangle=90)
+
+    st.pyplot(fig)
+with col2:
+    st.title('WEP＿Total')
+col1, col2, col3, col4 = st.columns(4)
+
+
+with col1:
+    st.title('南面のWEPH')
+    st.title('南面のWEPC')
+
+
+with col2:
+    st.title('北面のWEPH')
+    st.title('北面のWEPC')
+    
+with col3:
+    st.title('東面のWEPH')
+    st.title('東面のWEPC')
+    
+with col4:
+    st.title('西面のWEPH')
+    st.title('西面のWEPC')
+st.title('Plan2')
