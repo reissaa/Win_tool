@@ -52,7 +52,6 @@ with col1:
 with col2:
     st.title('WEP＿Total')
 col1, col2, col3, col4 = st.columns(4)
-sxa
 
 with col1:
     st.title('南面のWEPH')
