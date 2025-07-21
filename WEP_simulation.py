@@ -36,17 +36,7 @@ df_E=pd.read_csv(f'WEP_Result47_4dir/{select_location}/direct_select/E/WEP_Resul
 df_N=pd.read_csv(f'WEP_Result47_4dir/{select_location}/direct_select/N/WEP_Result_{select_location}_N.csv', header=0,sep=',',engine='python')
 df_W=pd.read_csv(f'WEP_Result47_4dir/{select_location}/direct_select/W/WEP_Result_{select_location}_W.csv', header=0,sep=',',engine='python')
 
-col1, col2, col3, col4,col5 = st.columns(5)
-with col1:
-    st.title('窓面積の割合')
-    color=['crimson','darkorange','blue','darkgreen']
-    fig, ax = plt.subplots()
-    rate=[S_area,E_area,N_area,W_area]
-    ax.pie(rate,colors=color,startangle=90)
 
-    st.pyplot(fig)
-with col2:
-    st.title('WEP＿Total')
 col1, col2, col3, col4 = st.columns(4)
 
 with col1:
@@ -74,3 +64,17 @@ with col4:
     st.title('西面のWEPC')
     st.markdown(f"{df_W[f'{select_winodow_w}'][1]:.2f}[kW/㎡]")
 st.title('Plan2')
+
+
+
+col1, col2, col3, col4,col5 = st.columns(5)
+with col1:
+    st.title('窓面積の割合')
+    color=['crimson','darkorange','blue','darkgreen']
+    fig, ax = plt.subplots()
+    rate=[S_area,E_area,N_area,W_area]
+    ax.pie(rate,colors=color,startangle=90)
+
+    st.pyplot(fig)
+with col2:
+    st.title('WEP＿Total')
