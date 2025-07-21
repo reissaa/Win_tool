@@ -55,20 +55,26 @@ col1, col2, col3, col4 = st.columns(4)
 
 with col1:
     st.title('南面のWEPH')
-    st.markdown(f"{df_S[f'{select_winodow_s}'][0]:.2f}")
+    st.markdown(f"{df_S[f'{select_winodow_s}'][0]:.2f}[kW/㎡]")
     st.title('南面のWEPC')
-    st.markdown(f"{df_S[f'{select_winodow_s}'][1]:.2f}")
+    st.markdown(f"{df_S[f'{select_winodow_s}'][1]:.2f}[kW/㎡]")
 
 
 with col2:
     st.title('北面のWEPH')
+    st.markdown(f"{df_N[f'{select_winodow_n}'][0]:.2f}[kW/㎡]")
     st.title('北面のWEPC')
+    st.markdown(f"{df_N[f'{select_winodow_n}'][1]:.2f}[kW/㎡]")
     
 with col3:
     st.title('東面のWEPH')
+    st.markdown(f"{df_E[f'{select_winodow_e}'][0]:.2f}[kW/㎡]")
     st.title('東面のWEPC')
+    st.markdown(f"{df_E[f'{select_winodow_e}'][0]:.2f}[kW/㎡]")
     
 with col4:
     st.title('西面のWEPH')
+    st.markdown(f"{df_W[f'{select_winodow_w}'][0]:.2f}[kW/㎡]")
     st.title('西面のWEPC')
+    st.markdown(f"{df_W[f'{select_winodow_w}'][1]:.2f}[kW/㎡]")
 st.title('Plan2')
