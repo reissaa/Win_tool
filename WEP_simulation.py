@@ -31,6 +31,8 @@ select_winodow_n =st.sidebar.selectbox('北の窓の種類を選択', window_sel
 N_area = st.sidebar.slider("北面の窓面積を入力", 0, 40, 25)
 select_winodow_w =st.sidebar.selectbox('西の窓の種類を選択', window_selectW)
 W_area = st.sidebar.slider("西面の窓面積を入力", 0, 40, 25)
+
+
 col1, col2, col3, col4,col5 = st.columns(5)
 with col1:
     st.title('方位ごとの窓面積の割合')
