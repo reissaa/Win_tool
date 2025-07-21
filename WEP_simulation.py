@@ -17,7 +17,7 @@ st.set_page_config(
 st.title('🪟Window Energy Performance')
 st.title('Plan1')
 location=os.listdir(R'Win_tool_47')
-df_0=pd.read_csv(R'Window_info/窓表作成.csv', header=0,sep=',',engine='python',encording='cp934')
+df_0=pd.read_csv(R'Window_info/窓表作成.csv', header=0,sep=',',engine='python',encoding='cp932')
 window_select=df_0['窓の種類']
 select_location =st.sidebar.selectbox('地域を選択してください', location)
 select_winodow_s =st.sidebar.selectbox('窓の種類を選択', window_select)
