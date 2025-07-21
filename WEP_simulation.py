@@ -35,10 +35,10 @@ df_S=pd.read_csv(f'WEP_Result47_4dir/{select_location}/direct_select/S/WEP_Resul
 df_E=pd.read_csv(f'WEP_Result47_4dir/{select_location}/direct_select/E/WEP_Result_{select_location}_E.csv', header=0,sep=',',engine='python')
 df_N=pd.read_csv(f'WEP_Result47_4dir/{select_location}/direct_select/N/WEP_Result_{select_location}_N.csv', header=0,sep=',',engine='python')
 df_W=pd.read_csv(f'WEP_Result47_4dir/{select_location}/direct_select/W/WEP_Result_{select_location}_W.csv', header=0,sep=',',engine='python')
-st.dataframe(df_S)
-st.dataframe(df_E)
-st.dataframe(df_N)
-st.dataframe(df_W)
+
+df_E[f'{select_winodow_e}']
+df_N[f'{select_winodow_n}']
+df_W[f'{select_winodow_w}']
 
 col1, col2, col3, col4,col5 = st.columns(5)
 with col1:
@@ -56,9 +56,9 @@ col1, col2, col3, col4 = st.columns(4)
 
 with col1:
     st.title('南面のWEPH')
-    st.markdown("*Streamlit* is **really** ***cool***.")
+    st.markdown(f"{df_S[f'{select_winodow_s}'][0]}")
     st.title('南面のWEPC')
-    st.markdown("*Streamlit* is **really** ***cool***.")
+    st.markdown(f"*Streamlit* is **really** ***cool***.")
 
 
 with col2:
