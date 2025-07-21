@@ -56,7 +56,7 @@ col1, col2, col3, col4 = st.columns(4)
 
 with col1:
     st.title('南面のWEPH')
-    st.markdown(f"{df_S[f'{select_winodow_s}'][0]}")
+    st.markdown(f"{df_S[f'{select_winodow_s}'][0]:.3f}")
     st.title('南面のWEPC')
     st.markdown(f"*Streamlit* is **really** ***cool***.")
 
