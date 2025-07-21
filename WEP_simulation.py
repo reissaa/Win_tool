@@ -18,15 +18,18 @@ st.title('🪟Window Energy Performance')
 st.title('Plan1')
 location=os.listdir(R'Win_tool_47')
 df_0=pd.read_csv(R'Window_info/窓表作成.csv', header=0,sep=',',engine='python',encoding='cp932')
-window_select=df_0['窓の種類']
+window_selectS=df_0['窓の種類']
+window_selectE=df_0['窓の種類']
+window_selectN=df_0['窓の種類']
+window_selectW=df_0['窓の種類']
 select_location =st.sidebar.selectbox('地域を選択してください', location)
-select_winodow_s =st.sidebar.selectbox('窓の種類を選択', window_select)
+select_winodow_s =st.sidebar.selectbox('南の窓の種類を選択', window_selectS)
 S_area = st.sidebar.slider("南面の窓面積を入力", 0, 40, 25)
-select_winodow_e =st.sidebar.selectbox('窓の種類を選択', window_select)
+select_winodow_e =st.sidebar.selectbox('東の窓の種類を選択', window_selectE)
 E_area = st.sidebar.slider("東面の窓面積を入力", 0, 40, 25)
-select_winodow_n =st.sidebar.selectbox('窓の種類を選択', window_select)
+select_winodow_n =st.sidebar.selectbox('北の窓の種類を選択', window_selectN)
 N_area = st.sidebar.slider("北面の窓面積を入力", 0, 40, 25)
-select_winodow_w =st.sidebar.selectbox('窓の種類を選択', window_select)
+select_winodow_w =st.sidebar.selectbox('西の窓の種類を選択', window_selectW)
 W_area = st.sidebar.slider("西面の窓面積を入力", 0, 40, 25)
 col1, col2, col3, col4,col5 = st.columns(5)
 with col1:
