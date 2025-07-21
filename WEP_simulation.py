@@ -15,7 +15,7 @@ st.set_page_config(
     layout='wide',
 )
 st.title('🪟Window Energy Performance')
-st.title('Plan1')
+
 location=os.listdir(R'Win_tool_47')
 df_0=pd.read_csv(R'Window_info/窓表作成.csv', header=0,sep=',',engine='python',encoding='cp932')
 window_selectS=df_0['窓の種類']
@@ -38,7 +38,7 @@ df_W=pd.read_csv(f'WEP_Result47_4dir/{select_location}/direct_select/W/WEP_Resul
 
 col1, col2, col3, col4,col5 = st.columns(5)
 with col1:
-    st.title('方位ごとの窓面積の割合')
+    st.title('窓面積の割合')
     color=['crimson','darkorange','blue','darkgreen']
     fig, ax = plt.subplots()
     rate=[S_area,E_area,N_area,W_area]
