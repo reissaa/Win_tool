@@ -49,7 +49,9 @@ col1, col2, col3, col4 = st.columns(4)
 
 with col1:
     st.title('南面のWEPH')
+    st.markdown("*Streamlit* is **really** ***cool***.")
     st.title('南面のWEPC')
+    st.markdown("*Streamlit* is **really** ***cool***.")
 
 
 with col2:
