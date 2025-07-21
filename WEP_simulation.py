@@ -1,4 +1,4 @@
-cordingimport streamlit as st
+import streamlit as st
 import pandas as pd
 import numpy as np
 from math import pi
