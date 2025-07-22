@@ -99,7 +99,7 @@ with col_small:
     fig = px.pie(df_rate, values=rate,names=['S','E','N','W'], title='窓面積の割合',color_discrete_sequence=color)
     st.plotly_chart(fig)
 with col_large:
-    color_1=['#ff0000','#0037ff']
+    color_1=['#0037ff','#ff0000']
     
     
 
