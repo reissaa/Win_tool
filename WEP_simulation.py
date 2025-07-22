@@ -128,7 +128,7 @@ df=pd.DataFrame(WEP_Result)
 df=df.T
 
 df.columns=['WEPH[kW/㎡・h]','WEPC[kW/㎡・h]']
-df.set_index=['S','E','N','W']
+df.set_index=(['S','E','N','W'])
 
 st.dataframe(df)
 with col2:
