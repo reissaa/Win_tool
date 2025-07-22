@@ -12,7 +12,6 @@ import os
 import plotly.graph_objects as go
 
 
-    return fig
 st.set_page_config(
     page_title='Multipage App',
     page_icon='🗾',
