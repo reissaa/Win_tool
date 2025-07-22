@@ -103,7 +103,7 @@ with col_large:
     
     
 
-    st.bar_chart(df,horizontal=True,color=color_1)
+    st.bar_chart(df,color=color_1,horizontal=True)
     
     
 
