@@ -102,7 +102,7 @@ with col_large:
     plt.subplots(figsize=(10, 4))
     
 
-    st.bar_chart(df,horizontal=True,color=color)
+    st.bar_chart(df,horizontal=True)
     
     
 
