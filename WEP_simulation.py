@@ -89,7 +89,7 @@ df.index=(['S','E','N','W'])
 
 
 
-col_small, col_large = st.columns([1, 3])
+col_small, col_large = st.columns([1, 2])
 with col_small:
     
     color=['crimson','darkorange','blue','darkgreen']
