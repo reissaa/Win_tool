@@ -82,29 +82,29 @@ col1, col2, col3, col4 = st.columns(4)
 
 with col1:
     st.title('南面のWEPH')
-    st.markdown(f"{df_S[f'{select_winodow_s}'][0]:.2f}[kW/㎡]")
+    st.markdown(f"{df_S[f'{select_winodow_s}'][0]:.2f}[kW/㎡・h]")
     st.title('南面のWEPC')
-    st.markdown(f"{df_S[f'{select_winodow_s}'][1]:.2f}[kW/㎡]")
+    st.markdown(f"{df_S[f'{select_winodow_s}'][1]:.2f}[kW/㎡・h]")
 
 
 with col2:
     st.title('北面のWEPH')
-    st.markdown(f"{df_N[f'{select_winodow_n}'][0]:.2f}[kW/㎡]")
+    st.markdown(f"{df_N[f'{select_winodow_n}'][0]:.2f}[kW/㎡・h]")
     st.title('北面のWEPC')
-    st.markdown(f"{df_N[f'{select_winodow_n}'][1]:.2f}[kW/㎡]")
+    st.markdown(f"{df_N[f'{select_winodow_n}'][1]:.2f}[kW/㎡・h]")
     
 with col3:
     st.title('東面のWEPH')
-    st.markdown(f"{df_E[f'{select_winodow_e}'][0]:.2f}[kW/㎡]")
+    st.markdown(f"{df_E[f'{select_winodow_e}'][0]:.2f}[kW/㎡・h]")
     st.title('東面のWEPC')
-    st.markdown(f"{df_E[f'{select_winodow_e}'][0]:.2f}[kW/㎡]")
+    st.markdown(f"{df_E[f'{select_winodow_e}'][0]:.2f}[kW/㎡・h]")
     
 with col4:
     st.title('西面のWEPH')
-    st.markdown(f"{df_W[f'{select_winodow_w}'][0]:.2f}[kW/㎡]")
+    st.markdown(f"{df_W[f'{select_winodow_w}'][0]:.2f}[kW/㎡・h]")
     st.title('西面のWEPC')
-    st.markdown(f"{df_W[f'{select_winodow_w}'][1]:.2f}[kW/㎡]")
-st.title('Plan2')
+    st.markdown(f"{df_W[f'{select_winodow_w}'][1]:.2f}[kW/㎡・h]")
+    
 
 
 
@@ -115,8 +115,19 @@ with col1:
     fig, ax = plt.subplots()
     rate=[S_area,E_area,N_area,W_area]
     ax.pie(rate,colors=color,startangle=90)
-
-    st.pyplot(fig)
+WEP_Result=np.empty([2,4])
+WEP_Result[0][0]=df_S[f'{select_winodow_s}'][0]
+WEP_Result[1][0]=df_S[f'{select_winodow_s}'][1]
+WEP_Result[0][1]=df_E[f'{select_winodow_e}'][0]
+WEP_Result[1][1]=df_E[f'{select_winodow_e}'][1]
+WEP_Result[0][2]=df_N[f'{select_winodow_n}'][0]
+WEP_Result[1][2]=df_N[f'{select_winodow_n}'][1]
+WEP_Result[0][3]=df_W[f'{select_winodow_w}'][0]
+WEP_Result[1][3]=df_W[f'{select_winodow_w}'][1]
+df=pd.DataFrame(WEP_Result)
+df.columns=['S','E','N','W']
+df.index=['WEPH[kW/㎡・h]']
+st.dataframe(df)
 with col2:
     st.title('WEP＿Total')
     fig = plot_horizontal_bars_with_error_plotly(df, label_col='変数名', mean_col='平均', std_col='標準偏差')
