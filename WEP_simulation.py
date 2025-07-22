@@ -74,17 +74,17 @@ with col4:
     
 
 WEP_Result=np.empty([2,4])
-WEP_Result[0][0]=df_S[f'{select_winodow_s}'][0]
-WEP_Result[1][0]=df_S[f'{select_winodow_s}'][1]
-WEP_Result[0][1]=df_E[f'{select_winodow_e}'][0]
-WEP_Result[1][1]=df_E[f'{select_winodow_e}'][1]
-WEP_Result[0][2]=df_N[f'{select_winodow_n}'][0]
-WEP_Result[1][2]=df_N[f'{select_winodow_n}'][1]
-WEP_Result[0][3]=df_W[f'{select_winodow_w}'][0]
-WEP_Result[1][3]=df_W[f'{select_winodow_w}'][1]
+WEP_Result[0][0]=df_S[f'{select_winodow_s}'][0]*S_area
+WEP_Result[1][0]=df_S[f'{select_winodow_s}'][1]*S_area
+WEP_Result[0][1]=df_E[f'{select_winodow_e}'][0]*E_area
+WEP_Result[1][1]=df_E[f'{select_winodow_e}'][1]*E_area
+WEP_Result[0][2]=df_N[f'{select_winodow_n}'][0]*N_area
+WEP_Result[1][2]=df_N[f'{select_winodow_n}'][1]*N_area
+WEP_Result[0][3]=df_W[f'{select_winodow_w}'][0]*W_area
+WEP_Result[1][3]=df_W[f'{select_winodow_w}'][1]*W_area
 df=pd.DataFrame(WEP_Result)
 df=df.T
-df.columns=['WEPH[kW/㎡・h]','WEPC[kW/㎡・h]']
+df.columns=['WEPH[kW]','WEPC[kW]']
 df.index=(['S','E','N','W'])
 
 
