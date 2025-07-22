@@ -104,6 +104,21 @@ with col_large:
     
 
     st.bar_chart(df,color=color_1,horizontal=True,use_container_width=True)
+
+
+point_data=pd.read_csv(Rf'site_data/地点の緯度経度.csv',index_col=None, header=0,sep=',',engine='python')
+site=str(select_location)
+point=list(point_data[site])
+area_data=pd.read_csv(Rf'site_data/省エネ区分・日射区分(47site.ver).csv',index_col=None, header=0,sep=',',engine='python')
+AREA=select_area=area_data[site][0]
+Rad_AREA=select_area=area_data[site][1]
+st.header(f"気候区分：{AREA}・日射区分:{Rad_AREA}")
+map = folium.Map(location=point,zoom_start=4.7)
+
+col1= st.columns(1)
+with col1:
+    folium.Marker(point,popup=site,icon=folium.Icon(color='red')).add_to(map)
+    folium_static(map)
     
     
 
