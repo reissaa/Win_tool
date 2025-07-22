@@ -41,7 +41,13 @@ df_E=pd.read_csv(f'WEP_Result47_4dir/{select_location}/direct_select/E/WEP_Resul
 df_N=pd.read_csv(f'WEP_Result47_4dir/{select_location}/direct_select/N/WEP_Result_{select_location}_N.csv', header=0,sep=',',engine='python')
 df_W=pd.read_csv(f'WEP_Result47_4dir/{select_location}/direct_select/W/WEP_Result_{select_location}_W.csv', header=0,sep=',',engine='python')
 
-    
+ site=str(select_location)
+point=list(point_data[site])
+area_data=pd.read_csv(Rf'site_data/省エネ区分・日射区分(47site.ver).csv',index_col=None, header=0,sep=',',engine='python')
+AREA=select_area=area_data[site][0]
+Rad_AREA=select_area=area_data[site][1]
+st.header(f"気候区分：{AREA}・日射区分:{Rad_AREA}")
+map = folium.Map(location=point,zoom_start=4.7)   
     
     
 
