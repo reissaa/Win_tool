@@ -99,6 +99,7 @@ with col_small:
     fig = px.pie(df_rate, values=rate,names=['S','E','N','W'], title='窓面積の割合',color_discrete_sequence=color)
     st.plotly_chart(fig)
 with col_large:
+    plt.subplots(figsize=(10, 4))
     
 
     st.bar_chart(df,horizontal=True)
