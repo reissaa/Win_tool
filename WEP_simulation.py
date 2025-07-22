@@ -10,7 +10,45 @@ import altair as alt
 from PIL import Image
 import os
 import plotly.graph_objects as go
+def plot_horizontal_bars_with_error_plotly(df, label_col, mean_col, std_col):
+    """
+    平均値の高い順に、エラーバー付き横棒グラフを Plotly で表示する（Streamlit対応）
 
+    Parameters:
+        df (pd.DataFrame): データフレーム
+        label_col (str): ラベル（変数名）を含む列の名前
+        mean_col (str): 平均値を含む列の名前
+        std_col (str): 標準偏差を含む列の名前
+
+    Returns:
+        fig (plotly.graph_objects.Figure): 横棒グラフのFigureオブジェクト
+    """
+    # 平均値の降順に並び替え
+    df_sorted = df.sort_values(by=mean_col, ascending=False)
+
+    # 色を指定：正なら青、負なら赤
+    colors = ['blue' if val >= 0 else 'red' for val in df_sorted[mean_col]]
+
+    # 横棒グラフ作成
+    fig = go.Figure(go.Bar(
+        x=df_sorted[mean_col],
+        y=df_sorted[label_col],
+        error_x=dict(type='data', array=df_sorted[std_col], visible=True),
+        orientation='h',
+        marker=dict(color=colors),
+        hovertemplate=f'{label_col}: %{{y}}<br>{mean_col}: %{{x}}<br>{std_col}: %{{error_x.array}}<extra></extra>'
+    ))
+
+    fig.update_layout(
+        title='平均値と標準偏差による横棒グラフ',
+        xaxis_title='平均値',
+        yaxis_title='変数',
+        yaxis=dict(autorange='reversed'),  # 上から高い順に
+        template='plotly_white',
+        height=max(400, len(df_sorted) * 40)  # 変数の数に応じて高さを調整
+    )
+
+    return fig
 
 st.set_page_config(
     page_title='Multipage App',
