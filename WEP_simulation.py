@@ -115,8 +115,8 @@ Rad_AREA=select_area=area_data[site][1]
 st.header(f"気候区分：{AREA}・日射区分:{Rad_AREA}")
 map = folium.Map(location=point,zoom_start=4.7)
 
-col1= st.columns(1)
-with col1:
+MAP= st.columns(1)
+with MAP:
     folium.Marker(point,popup=site,icon=folium.Icon(color='red')).add_to(map)
     folium_static(map)
     
