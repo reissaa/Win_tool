@@ -101,7 +101,7 @@ with col_small:
 with col_large:
     
 
-    st.bar_chart(df,horizontal=True)
+    st.bar_chart(df,horizontal=True,title='WEP Result')
     
     
 
