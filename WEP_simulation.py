@@ -114,8 +114,8 @@ with col_large:
 
 
 
-MAP= st.columns(1)
-with MAP:
+CCP= st.columns(1)
+with CCP:
     folium.Marker(point,popup=site,icon=folium.Icon(color='red')).add_to(map)
     folium_static(map)
     
