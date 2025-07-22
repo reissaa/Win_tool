@@ -78,13 +78,14 @@ df_N=pd.read_csv(f'WEP_Result47_4dir/{select_location}/direct_select/N/WEP_Resul
 df_W=pd.read_csv(f'WEP_Result47_4dir/{select_location}/direct_select/W/WEP_Result_{select_location}_W.csv', header=0,sep=',',engine='python')
 col1, col2, col3, col4 = st.columns(4)
 with col1:
-    st.title('窓面積の割合')
+    
     color=['crimson','darkorange','blue','darkgreen']
     fig, ax = plt.subplots()
     rate=[S_area,E_area,N_area,W_area]
     df_rate = pd.DataFrame(rate)
-    fig = px.pie(df_rate, values=rate,names=['S','E','N','W'], title='Sample Pie Chart')
+    fig = px.pie(df_rate, values=rate,names=['S','E','N','W'], title='窓面積の割合',color_discrete_sequence=color)
     st.plotly_chart(fig)
+    
     
     
 
