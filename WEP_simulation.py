@@ -82,7 +82,10 @@ with col1:
     color=['crimson','darkorange','blue','darkgreen']
     fig, ax = plt.subplots()
     rate=[S_area,E_area,N_area,W_area]
-    ax.pie(rate,colors=color,startangle=90)
+    df_rate = pd.DataFrame(rate)
+    fig = px.pie(df, values='df_rate', names='Category', title='Sample Pie Chart')
+   st.plotly_chart(fig)
+    
     
 
 col1, col2, col3, col4 = st.columns(4)
