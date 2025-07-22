@@ -127,11 +127,6 @@ with Col1:
     fig, ax = plt.subplots()
     rate=[S_area,E_area,N_area,W_area]
     ax.pie(rate,colors=color,startangle=90)
-
-
-
-
-
 with Col2:
     st.title('WEP＿Total')
     st.dataframe(df)
