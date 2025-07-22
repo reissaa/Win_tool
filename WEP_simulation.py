@@ -89,6 +89,7 @@ df.index=(['S','E','N','W'])
 
 
 col1, col2, col3, col4 = st.columns(4)
+bar_chart_col = st.columns([1, 3])
 with col1:
     
     color=['crimson','darkorange','blue','darkgreen']
@@ -97,7 +98,7 @@ with col1:
     df_rate = pd.DataFrame(rate)
     fig = px.pie(df_rate, values=rate,names=['S','E','N','W'], title='窓面積の割合',color_discrete_sequence=color)
     st.plotly_chart(fig)
-with [col2:col4]:
+with bar_chart_col:
     
 
     st.bar_chart(df,horizontal=True)
