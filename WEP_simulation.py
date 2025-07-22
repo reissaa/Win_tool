@@ -100,7 +100,7 @@ with col1:
 with col2:
     source = data.barley()
 
-    st.bar_chart(df horizontal=True)
+    st.bar_chart(df,horizontal=True)
     
     
 
