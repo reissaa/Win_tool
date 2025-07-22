@@ -106,15 +106,6 @@ with col4:
     st.markdown(f"{df_W[f'{select_winodow_w}'][1]:.2f}[kW/㎡・h]")
     
 
-
-
-col1, col2, col3, col4,col5 = st.columns(5)
-with col1:
-    st.title('窓面積の割合')
-    color=['crimson','darkorange','blue','darkgreen']
-    fig, ax = plt.subplots()
-    rate=[S_area,E_area,N_area,W_area]
-    ax.pie(rate,colors=color,startangle=90)
 WEP_Result=np.empty([2,4])
 WEP_Result[0][0]=df_S[f'{select_winodow_s}'][0]
 WEP_Result[1][0]=df_S[f'{select_winodow_s}'][1]
@@ -126,12 +117,21 @@ WEP_Result[0][3]=df_W[f'{select_winodow_w}'][0]
 WEP_Result[1][3]=df_W[f'{select_winodow_w}'][1]
 df=pd.DataFrame(WEP_Result)
 df=df.T
-
 df.columns=['WEPH[kW/㎡・h]','WEPC[kW/㎡・h]']
 df.index=(['S','E','N','W'])
+col1, col2, col3, col4,col5 = st.columns(5)
+with col1:
+    st.title('窓面積の割合')
+    color=['crimson','darkorange','blue','darkgreen']
+    fig, ax = plt.subplots()
+    rate=[S_area,E_area,N_area,W_area]
+    ax.pie(rate,colors=color,startangle=90)
 
-st.dataframe(df)
+
+
+
+
 with col2:
     st.title('WEP＿Total')
-    fig = plot_horizontal_bars_with_error_plotly(df)
-    st.plotly_chart(fig, use_container_width=True)
+    st.dataframe(df)
+
