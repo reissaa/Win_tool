@@ -126,7 +126,7 @@ WEP_Result[0][3]=df_W[f'{select_winodow_w}'][0]
 WEP_Result[1][3]=df_W[f'{select_winodow_w}'][1]
 df=pd.DataFrame(WEP_Result)
 df.columns=['S','E','N','W']
-df.set_index=['WEPH[kW/㎡・h]']
+df.set_index=['WEPH[kW/㎡・h]','WEPC[kW/㎡・h]']
 df=df.T
 st.dataframe(df)
 with col2:
