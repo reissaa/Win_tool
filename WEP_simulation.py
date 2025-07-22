@@ -88,9 +88,9 @@ df.columns=['WEPH[kW]','WEPC[kW]']
 df.index=(['S','E','N','W'])
 
 
-col1, col2, col3, col4 = st.columns(4)
-bar_chart_col = st.columns([1, 3])
-with col1:
+
+col_small, col_large = st.columns([1, 3])
+with col_small:
     
     color=['crimson','darkorange','blue','darkgreen']
     fig, ax = plt.subplots()
@@ -98,7 +98,7 @@ with col1:
     df_rate = pd.DataFrame(rate)
     fig = px.pie(df_rate, values=rate,names=['S','E','N','W'], title='窓面積の割合',color_discrete_sequence=color)
     st.plotly_chart(fig)
-with bar_chart_col:
+with col_large:
     
 
     st.bar_chart(df,horizontal=True)
