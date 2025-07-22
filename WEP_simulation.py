@@ -119,3 +119,5 @@ with col1:
     st.pyplot(fig)
 with col2:
     st.title('WEP＿Total')
+    fig = plot_horizontal_bars_with_error_plotly(df, label_col='変数名', mean_col='平均', std_col='標準偏差')
+    st.plotly_chart(fig, use_container_width=True)
