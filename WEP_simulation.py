@@ -84,7 +84,7 @@ with col1:
     rate=[S_area,E_area,N_area,W_area]
     df_rate = pd.DataFrame(rate)
     fig = px.pie(df, values='df_rate', names='Category', title='Sample Pie Chart')
-   st.plotly_chart(fig)
+    st.plotly_chart(fig)
     
     
 
