@@ -120,8 +120,8 @@ df=df.T
 df.columns=['WEPH[kW/㎡・h]','WEPC[kW/㎡・h]']
 df.index=(['S','E','N','W'])
 
-col1, col2, col3, col4 = st.columns(4)
-with col1:
+Col1, col2, col3, col4 = st.columns(4)
+with Col1:
     st.title('窓面積の割合')
     color=['crimson','darkorange','blue','darkgreen']
     fig, ax = plt.subplots()
@@ -132,7 +132,7 @@ with col1:
 
 
 
-with col2:
+with Col2:
     st.title('WEP＿Total')
     st.dataframe(df)
 
