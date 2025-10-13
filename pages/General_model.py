@@ -29,7 +29,7 @@ st.header(f"気候区分：{AREA}・日射区分:{Rad_AREA}")
 map = folium.Map(location=point,zoom_start=4.7)
 
 col1, col2 = st.columns(2)
-img1=Image.open(Rf'Win_tool_47/{site}/暖冷房期間({site}).png')
+img1=Image.open(Rf'site_info/{site}/暖冷房期間({site}).png')
 with col1:
     folium.Marker(point,popup=site,icon=folium.Icon(color='red')).add_to(map)
     folium_static(map)
