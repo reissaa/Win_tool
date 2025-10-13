@@ -48,7 +48,7 @@ def get_load_by_model(selected_model: str):
     
 
 select_model =st.selectbox('想定モデル:',model)
-sel_model=get_load_by_model(select_model)
+sel_model=get_load_by_model(f'{select_model}')
 col1, col2, col3 = st.columns(3)
 img1=Image.open(Rf"png/{select_model}.png")
 
