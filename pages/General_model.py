@@ -65,8 +65,8 @@ with col1:
    st.image(img1)
    st.header("窓面積割合")
    st.image(img_1)
-img_2C=Image.open(Rf"Win_tool_47/{site}/冷房期間の4方位の日射量_地点({site}).png")
-img_2H=Image.open(Rf"Win_tool_47/{site}/暖房期間の4方位の日射量_地点({site}).png")
+img_2C=Image.open(Rf"site_info/{site}/冷房期間の4方位の日射量_地点({site}).png")
+img_2H=Image.open(Rf"site_info/{site}/暖房期間の4方位の日射量_地点({site}).png")
 with col2:
    st.header("冷房期間の日射量")
    st.image(img_2C)
