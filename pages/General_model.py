@@ -56,7 +56,7 @@ with col1:
     st.header("モデル")
     st.image(img1)
 img2=Image.open(Rf"model_Load/{site}/{sel_model}/地点({site})・{sel_model}の年間月ごとの負荷・断熱等級4.png")
-with col2:siter
+with col2:
     st.header("年間月ごと負荷")
     st.image(img2)
 img3=Image.open(Rf"model_Load/{site}/{sel_model}//地点・{site}・モデル{sel_model}・年間月負荷割合.png")
