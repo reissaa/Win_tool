@@ -29,14 +29,23 @@ Rad_AREA=select_area=area_data[site][1]
 st.header(f"気候区分：{AREA}・日射区分:{Rad_AREA}")
 map = folium.Map(location=point,zoom_start=4.7)
 
-col1, col2 = st.columns(2)
-img1=Image.open(Rf'site_info/{site}/暖冷房期間({site}).png')
+col1, col2, col3= st.columns(3)
+img1=Image.open(Rf"Env_analysis/{site}/{site}(外気温度).png")
+img2=Image.open(Rf"Env_analysis/{site}/{site}(相対湿度).png")
 with col1:
     folium.Marker(point,popup=site,icon=folium.Icon(color='red')).add_to(map)
     folium_static(map)
 with col2:
-   st.header("暖冷房期間")
+   st.header("外気温度[℃]")
    st.image(img1)
+with col3:
+   st.header("相対湿度[%]")
+   st.image(img2)
+
+
+
+
+
 model=['標準住宅モデル','平屋モデル','3Fモデル']
 Load=['General','Hiraya','3F']
 def get_load_by_model(selected_model: str):
