@@ -36,7 +36,7 @@ with col1:
 with col2:
    st.header("暖冷房期間")
    st.image(img1)
-model=['標準住宅モデル']
+model=['標準住宅モデル','平屋モデル','3Fモデル']
 select_model =st.selectbox('想定モデル:',model)
 col1, col2, col3 = st.columns(3)
 img1=Image.open(Rf"png/{select_model}.png")
