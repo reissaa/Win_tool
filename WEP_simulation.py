@@ -21,7 +21,7 @@ st.set_page_config(
 )
 st.title('🪟Window Energy Performance')
 
-location=os.listdir(R'Win_tool/site_info')
+location=os.listdir(R'site_info/')
 df_0=pd.read_csv(R'Window_info/窓表作成.csv', header=0,sep=',',engine='python',encoding='cp932')
 window_selectS=df_0['窓の種類']
 window_selectE=df_0['窓の種類']
