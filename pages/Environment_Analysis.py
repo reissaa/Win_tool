@@ -42,8 +42,15 @@ with col3:
    st.header("相対湿度[%]")
    st.image(img2)
 
-
-
+col1, col2= st.columns(2)
+img3=Image.open(Rf"Env_analysis/{site}/外気温度・相対湿度地点：{site}.png")
+img4=Image.open(Rf"Env_analysis/{site}/日射量地点：{site}.png")
+with col1:
+    st.header("最高気温・平均気温・最低気温・平均相対湿度")
+    st.image(img3)
+with col2:
+    st.header("日射＜法線面直達日射・水平面天空日射＞")
+    st.image(img4)
 
 
 model=['標準住宅モデル','平屋モデル','3Fモデル']
