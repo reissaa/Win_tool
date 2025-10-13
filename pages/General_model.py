@@ -17,7 +17,7 @@ st.set_page_config(
 st.title('🔎あなたの住まいの気候区分と日射区分')
 
 st.sidebar.success('項目を選択してください')
-location=os.listdir(R'Win_tool_47')
+location=os.listdir(R'Env_analysis')
 select_location =st.selectbox('地域を選択してください:',location)
 point_data=pd.read_csv(Rf'site_data/地点の緯度経度.csv',index_col=None, header=0,sep=',',engine='python')
 site=str(select_location)
