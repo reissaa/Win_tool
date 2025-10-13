@@ -67,8 +67,8 @@ with col3:
     resized_img3 = img3.resize(new_size)
     st.image(img3)
 
-col1, col2, col3 = st.columns(3)
-img1=Image.open(Rf"png/{select_model}.png")
+Col1, Col2= st.columns(2)
+img1=Image.open(RRf"model_Load/{site}/{sel_model}/(地点：{site}・モデル{sel_model})断熱性能ごとの暖房負荷の違い.png")
 
 with col1:
     st.header("モデル")
@@ -77,13 +77,7 @@ img2=Image.open(Rf"model_Load/{site}/{sel_model}/地点({site})・{sel_model}の
 with col2:
     st.header("年間月ごと負荷")
     st.image(img2)
-img3=Image.open(Rf"model_Load/{site}/{sel_model}//地点・{site}・モデル{sel_model}・年間月負荷割合.png")
 
-with col3:
-    st.header("割合")
-    new_size = (10, 10)
-    resized_img3 = img3.resize(new_size)
-    st.image(img3)
 
 
 col1, col2, col3 = st.columns(3)
