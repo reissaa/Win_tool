@@ -53,19 +53,19 @@ col1, col2, col3 = st.columns(3)
 img1=Image.open(Rf"png/{select_model}.png")
 
 with col1:
-   st.header("モデル")
-   st.image(img1)
+    st.header("モデル")
+    st.image(img1)
 img2=Image.open(Rf"model_Load/{site}/{sel_model}/地点({site})・{sel_model}の年間月ごとの負荷・断熱等級4.png")
 with col2:siter
-   st.header("年間月ごと負荷")
-   st.image(img2)
+    st.header("年間月ごと負荷")
+    st.image(img2)
 img3=Image.open(Rf"model_Load/{site}/{sel_model}//地点・{site}・モデル{sel_model}・年間月負荷割合.png")
 
 with col3:
-   st.header("割合")
-   new_size = (10, 10)
-   resized_img3 = img3.resize(new_size)
-   st.image(img3)
+    st.header("割合")
+    new_size = (10, 10)
+    resized_img3 = img3.resize(new_size)
+    st.image(img3)
 
 col1, col2, col3 = st.columns(3)
 img1=Image.open(Rf"png/標準住宅モデル窓面積表.png")
