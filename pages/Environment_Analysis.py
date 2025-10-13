@@ -34,7 +34,7 @@ img1=Image.open(Rf"Env_analysis/{site}/{site}(外気温度).png")
 img2=Image.open(Rf"Env_analysis/{site}/{site}(相対湿度).png")
 with col1:
     folium.Marker(point,popup=site,icon=folium.Icon(color='red')).add_to(map)
-    folium_static(map,width=300, height=300)
+    folium_static(map,width=350, height=300)
 with col2:
    st.header("外気温度[℃]")
    st.image(img1)
