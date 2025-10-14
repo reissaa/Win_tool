@@ -81,5 +81,32 @@ with col6:
     st.header("6月")
     st.image(img10)
 
-img11=Image.open(Rf"Env_analysis/{site}/風配図/1月の風配図  地点：{site}.png")
-img12=Image.open(Rf"Env_analysis/{site}/風配図/2月の風配図  地点：{site}.png")
+
+
+col1, col2,col3,col4,col5,col6= st.columns(6)
+img11=Image.open(Rf"Env_analysis/{site}/風配図/7月の風配図  地点：{site}.png")
+img12=Image.open(Rf"Env_analysis/{site}/風配図/8月の風配図  地点：{site}.png")
+img13=Image.open(Rf"Env_analysis/{site}/風配図/9月の風配図  地点：{site}.png")
+img14=Image.open(Rf"Env_analysis/{site}/風配図/10月の風配図  地点：{site}.png")
+img15=Image.open(Rf"Env_analysis/{site}/風配図/11月の風配図  地点：{site}.png")
+img16=Image.open(Rf"Env_analysis/{site}/風配図/12月の風配図  地点：{site}.png")
+
+
+with col1:
+    st.header("7月")
+    st.image(img11)
+with col2:
+    st.header("8月")
+    st.image(img12)
+with col3:
+    st.header("9月")
+    st.image(img13)
+with col4:
+    st.header("10月")
+    st.image(img14)
+with col5:
+    st.header("11月")
+    st.image(img15)
+with col6:
+    st.header("12月")
+    st.image(img16)
