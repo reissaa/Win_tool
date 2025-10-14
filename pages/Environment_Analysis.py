@@ -52,70 +52,34 @@ with col2:
     st.header("日射＜法線面直達日射・水平面天空日射＞")
     st.image(img4)
 
+st.header(f"{site} 風配図")
+col1, col2,col3,col4,col5,col6= st.columns(6)
+img5=Image.open(Rf"Env_analysis/{site}/風配図/1月の風配図  地点：{site}.png")
+img6=Image.open(Rf"Env_analysis/{site}/風配図/2月の風配図  地点：{site}.png")
+img7=Image.open(Rf"Env_analysis/{site}/風配図/3月の風配図  地点：{site}.png")
+img8=Image.open(Rf"Env_analysis/{site}/風配図/4月の風配図  地点：{site}.png")
+img9=Image.open(Rf"Env_analysis/{site}/風配図/5月の風配図  地点：{site}.png")
+img10=Image.open(Rf"Env_analysis/{site}/風配図/6月の風配図  地点：{site}.png")
 
-model=['標準住宅モデル','平屋モデル','3Fモデル']
-Load=['General','Hiraya','3F']
-def get_load_by_model(selected_model: str):
-    model_to_load_map = {
-        '標準住宅モデル': 'General',
-        '平屋モデル': 'Hiraya',
-        '3Fモデル': '3F'
-    }
-    return model_to_load_map.get(selected_model)
-    
-
-select_model =st.selectbox('想定モデル:',model)
-sel_model=get_load_by_model(f'{select_model}')
-col1, col2, col3 = st.columns(3)
-img1=Image.open(Rf"png/{select_model}.png")
 
 with col1:
-    st.header("モデル")
-    st.image(img1)
-img2=Image.open(Rf"model_Load/{site}/{sel_model}/地点({site})・{sel_model}の年間月ごとの負荷・断熱等級4.png")
+    st.header("1月")
+    st.image(img5)
 with col2:
-    st.header("年間月ごと負荷")
-    st.image(img2)
-img3=Image.open(Rf"model_Load/{site}/{sel_model}//地点・{site}・モデル{sel_model}・年間月負荷割合.png")
-
+    st.header("2月")
+    st.image(img4)
 with col3:
-    st.header("割合")
-    new_size = (10, 10)
-    resized_img3 = img3.resize(new_size)
-    st.image(img3)
+    st.header("3月")
+    st.image(img5)
+with col4:
+    st.header("4月")
+    st.image(img4)
+with col5:
+    st.header("5月")
+    st.image(img5)
+with col6:
+    st.header("6月")
+    st.image(img4)
 
-Col1, Col2= st.columns(2)
-img1=Image.open(Rf"model_Load/{site}/{sel_model}/(地点：{site}・モデル{sel_model})断熱性能ごとの暖房負荷の違い.png")
-
-with col1:
-    st.header("断熱等級による比較＜暖房＞")
-    st.image(img1)
-img2=Image.open(Rf"model_Load/{site}/{sel_model}/(地点：{site}・モデル{sel_model})断熱性能ごとの冷房負荷の違い.png")
-with col2:
-    st.header("断熱等級による比較＜冷房＞")
-    st.image(img2)
-
-
-
-col1, col2, col3 = st.columns(3)
-img1=Image.open(Rf"png/標準住宅モデル窓面積表.png")
-img_1=Image.open(Rf"png/標準住宅モデル窓面積割合.png")
-with col1:
-   st.header("方位ごとの窓面積")
-   st.image(img1)
-   st.header("窓面積割合")
-   st.image(img_1)
-img_2C=Image.open(Rf"site_info/{site}/冷房期間の4方位の日射量_地点({site}).png")
-img_2H=Image.open(Rf"site_info/{site}/暖房期間の4方位の日射量_地点({site}).png")
-with col2:
-   st.header("冷房期間の日射量")
-   st.image(img_2C)
-   st.header("暖房期間の日射量")
-   st.image(img_2H)
-img3=Image.open(Rf"png/暖冷房スケジュール.png")
-img4=Image.open(Rf"png/暖房冷房設定温度.png")
-with col3:
-   st.header("暖冷房スケジュール")
-   st.image(img3)
-   st.header("暖冷房の設定温度")
-   st.image(img4)
+img11=Image.open(Rf"Env_analysis/{site}/風配図/1月の風配図  地点：{site}.png")
+img12=Image.open(Rf"Env_analysis/{site}/風配図/2月の風配図  地点：{site}.png")
