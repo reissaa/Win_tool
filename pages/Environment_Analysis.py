@@ -67,19 +67,19 @@ with col1:
     st.image(img5)
 with col2:
     st.header("2月")
-    st.image(img4)
+    st.image(img6)
 with col3:
     st.header("3月")
-    st.image(img5)
+    st.image(img7)
 with col4:
     st.header("4月")
-    st.image(img4)
+    st.image(img8)
 with col5:
     st.header("5月")
-    st.image(img5)
+    st.image(img9)
 with col6:
     st.header("6月")
-    st.image(img4)
+    st.image(img10)
 
 img11=Image.open(Rf"Env_analysis/{site}/風配図/1月の風配図  地点：{site}.png")
 img12=Image.open(Rf"Env_analysis/{site}/風配図/2月の風配図  地点：{site}.png")
