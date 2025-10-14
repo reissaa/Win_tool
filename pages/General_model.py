@@ -32,7 +32,7 @@ col1, col2 = st.columns(2)
 img1=Image.open(Rf'site_info/{site}/暖冷房期間({site}).png')
 with col1:
     folium.Marker(point,popup=site,icon=folium.Icon(color='red')).add_to(map)
-    folium_static(map)
+    folium_static(map,width=350, height=350)
 with col2:
    st.header("暖冷房期間")
    st.image(img1)
