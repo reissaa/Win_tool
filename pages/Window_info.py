@@ -37,7 +37,7 @@ with col2:
    st.header("日射取得性能")
    st.image(img2)
 select_winodow=st.sidebar.selectbox('窓を選択してください', win_name)
- st.header(f"窓の性能　選択された窓{}")
+ st.header(f"窓の性能　選択された窓{select_winodow}")
     
 
 
