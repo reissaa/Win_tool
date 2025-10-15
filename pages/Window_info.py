@@ -36,8 +36,8 @@ with col1:
 with col2:
    st.header("日射取得性能")
    st.image(img2)
-select_winodow=st.selectbox('窓を選択してください', win_name)
-st.header(f"窓の性能　選択された窓{select_winodow}")
+select_window=st.selectbox('窓を選択してください', win_name)
+st.header(f"窓の性能　選択された窓{select_window}")
     
 col1, col2 = st.columns(2)
 img3=Image.open(Rf"窓性能ラベル/日射取得率/{select_window}.png")
