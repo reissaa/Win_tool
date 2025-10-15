@@ -48,8 +48,6 @@ with col1:
 with col2:
     st.header("日射取")
     st.image(img3)
-select_winodow=st.selectbox('窓を選択してください', win_name)
-st.header(f"窓の性能　選択された窓{select_winodow}")
 
 
     
