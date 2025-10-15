@@ -24,19 +24,16 @@ st.title('🪟Window information')
 location=os.listdir(R'site_info/')
 df_0=pd.read_csv(R'Window_info/窓表作成.csv', header=0,sep=',',engine='python',encoding='cp932')
 win_name=list(df_0['窓の種類'])
-window_selectS=df_0['窓の種類']
-window_selectE=df_0['窓の種類']
-window_selectN=df_0['窓の種類']
-window_selectW=df_0['窓の種類']
-select_location =st.sidebar.selectbox('地域を選択してください', location)
-select_winodow_s =st.sidebar.selectbox('南の窓の種類を選択', window_selectS)
-S_area = st.sidebar.slider("南面の窓面積を入力", 0, 40, 25)
-select_winodow_e =st.sidebar.selectbox('東の窓の種類を選択', window_selectE)
-E_area = st.sidebar.slider("東面の窓面積を入力", 0, 40, 25)
-select_winodow_n =st.sidebar.selectbox('北の窓の種類を選択', window_selectN)
-N_area = st.sidebar.slider("北面の窓面積を入力", 0, 40, 25)
-select_winodow_w =st.sidebar.selectbox('西の窓の種類を選択', window_selectW)
-W_area = st.sidebar.slider("西面の窓面積を入力", 0, 40, 25)
+col1, col2 = st.columns(2)
+img1=Image.open(Rf"png/熱貫流率の分布.png")
+img2=Image.open(Rf"png/日射熱取得率の分布.png")
+with col1:
+    st.header("断熱性能")
+    st.image(img1)
+with col2:
+   st.header("日射取得性能")
+   st.image(img2)
+
 df_S=pd.read_csv(f'WEP_Result47_4dir/{select_location}/direct_select/S/WEP_Result_{select_location}_S.csv', header=0,sep=',',engine='python')
 df_E=pd.read_csv(f'WEP_Result47_4dir/{select_location}/direct_select/E/WEP_Result_{select_location}_E.csv', header=0,sep=',',engine='python')
 df_N=pd.read_csv(f'WEP_Result47_4dir/{select_location}/direct_select/N/WEP_Result_{select_location}_N.csv', header=0,sep=',',engine='python')
