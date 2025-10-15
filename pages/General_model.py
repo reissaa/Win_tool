@@ -81,8 +81,8 @@ with col2:
 
 
 col1, col2, col3 = st.columns(3)
-img1=Image.open(Rf"png/標準住宅モデル窓面積表.png")
-img_1=Image.open(Rf"png/標準住宅モデル窓面積割合.png")
+img1=Image.open(Rf"png/{select_model}窓面積表.png")
+img_1=Image.open(Rf"png/{select_model}窓面積割合.png")
 with col1:
    st.header("方位ごとの窓面積")
    st.image(img1)
