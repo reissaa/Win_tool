@@ -24,7 +24,9 @@ st.title('🪟Window information')
 
 location=os.listdir(R'site_info/')
 df_0=pd.read_csv(R'Window_info/窓表作成.csv', header=0,sep=',',engine='python',encoding='cp932')
+
 win_name=list(df_0['窓の種類'])
+
 col1, col2 = st.columns(2)
 img1=Image.open(Rf"png/熱貫流率の分布.png")
 img2=Image.open(Rf"png/日射熱取得率の分布.png")
@@ -34,10 +36,10 @@ with col1:
 with col2:
    st.header("日射取得性能")
    st.image(img2)
+select_winodow=st.sidebar.selectbox('窓を選択してください', win_name)
+ st.header(f"窓の性能　選択された窓{}")
+    
 
- 
-    
-    
 
 
     
