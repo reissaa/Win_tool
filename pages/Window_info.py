@@ -23,6 +23,7 @@ st.title('🪟Window information')
 
 location=os.listdir(R'site_info/')
 df_0=pd.read_csv(R'Window_info/窓表作成.csv', header=0,sep=',',engine='python',encoding='cp932')
+win_name=list(df_0['窓の種類'])
 window_selectS=df_0['窓の種類']
 window_selectE=df_0['窓の種類']
 window_selectN=df_0['窓の種類']
@@ -117,8 +118,8 @@ folium.Marker(point,popup=site,icon=folium.Icon(color='red')).add_to(map)
 folium_static(map)
     
     
-st.subheader('窓の比較')
+st.subheader('窓の性能比較📋')
 ABC3 = st.multiselect(
     'Please select',
-    ['A', 'B', 'C'],
+    win_name,
     [])
