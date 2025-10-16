@@ -40,7 +40,7 @@ select_window=st.selectbox('窓を選択してください', win_name)
 st.header(f"窓の性能　選択された窓{select_window}")
     
 col1, col2 = st.columns(2)
-img3=Image.open(Rf"窓性能ラベル/日射取得率/{select_window}.png")
+img3=Image.open(Rf"窓性能ラベル/断熱性能/{select_window}.png")
 img4=Image.open(Rf"窓性能ラベル/日射取得率/{select_window}.png")
 with col1:
     st.header("断熱")
