@@ -46,8 +46,8 @@ with col1:
     st.header("断熱")
     st.image(img3)
 with col2:
-    st.header("日射取")
-    st.image(img3)
+    st.header("日射取得")
+    st.image(img4)
 
 
     
