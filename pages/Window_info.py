@@ -52,7 +52,8 @@ df_S=pd.read_csv(f'WEP_Result47_4dir/{select_location}/direct_select/S/WEP_Resul
 df_E=pd.read_csv(f'WEP_Result47_4dir/{select_location}/direct_select/E/WEP_Result_{select_location}_E.csv', header=0,sep=',',engine='python')
 df_N=pd.read_csv(f'WEP_Result47_4dir/{select_location}/direct_select/N/WEP_Result_{select_location}_N.csv', header=0,sep=',',engine='python')
 df_W=pd.read_csv(f'WEP_Result47_4dir/{select_location}/direct_select/W/WEP_Result_{select_location}_W.csv', header=0,sep=',',engine='python')
-
+location=os.listdir(R'site_info/')
+select_location =st.sidebar.selectbox('地域を選択してください', location)
     
     
 st.subheader('窓の性能比較📋')
