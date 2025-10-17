@@ -48,7 +48,10 @@ with col1:
 with col2:
     st.header("日射取得")
     st.image(img4)
-
+df_S=pd.read_csv(f'WEP_Result47_4dir/{select_location}/direct_select/S/WEP_Result_{select_location}_S.csv', header=0,sep=',',engine='python')
+df_E=pd.read_csv(f'WEP_Result47_4dir/{select_location}/direct_select/E/WEP_Result_{select_location}_E.csv', header=0,sep=',',engine='python')
+df_N=pd.read_csv(f'WEP_Result47_4dir/{select_location}/direct_select/N/WEP_Result_{select_location}_N.csv', header=0,sep=',',engine='python')
+df_W=pd.read_csv(f'WEP_Result47_4dir/{select_location}/direct_select/W/WEP_Result_{select_location}_W.csv', header=0,sep=',',engine='python')
 
     
     
@@ -56,6 +59,8 @@ st.subheader('窓の性能比較📋')
 ABC3 = st.multiselect(
     'Please select',
     win_name,
-    [])
+    []
+    max_selections=2,
+    )
 
 st.write("ABC3[0]")
