@@ -57,3 +57,5 @@ ABC3 = st.multiselect(
     'Please select',
     win_name,
     [])
+
+st.write(ABC3[0])
