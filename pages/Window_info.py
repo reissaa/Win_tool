@@ -51,11 +51,11 @@ with col2:
  
     
 st.subheader('窓の性能比較📋')
-ABC3 = st.multiselect(
+ABC = st.multiselect(
     'Please select',
     win_name,
     [],
     max_selections=2,
     )
-
+st.write(ABC)
 
