@@ -15,7 +15,7 @@ select_location =st.sidebar.selectbox('地域を選択してください', locat
 
 Win_df=pd.read_csv(R'窓性能ラベル/窓表作成.csv', header=0,sep=',',engine='python',encoding='cp932')
 
-st.plotly_chart(fig)
+
 dfS=pd.read_csv(f'WEP_Result47_4dir/{select_location}/direct_select/S/WEP_Result_{select_location}_S.csv', header=0,sep=',',engine='python')
 dfS=dfS.T
 dfS.reset_index(inplace=True, drop=True)
