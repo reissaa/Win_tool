@@ -7,8 +7,12 @@ Win_df=pd.read_csv(R'窓性能ラベル/窓表作成.csv', header=0,sep=',',engi
 # Writes a component similar to st.write()
 
 fig = px.scatter(Win_df, x="熱貫流率", y="日射熱取得率")
+fig.update_yaxes(range=(0,1))
+fig.update_yaxes(tick0=0,dtick=0.1)
+fig.update_xaxes(range=(0,6.5))
+fig.update_xaxes(tick0=0,dtick=0.5)
 st.plotly_chart(fig)
-selected_points = plotly_events(fig)
+#selected_points = plotly_events(fig)
 
 # Can write inside of things using with!
 #with st.expander('Plot'):
