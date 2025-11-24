@@ -30,7 +30,7 @@ fig.update_yaxes(tick0=0,dtick=0.1)
 fig.update_xaxes(range=(0,6.0+0.11))
 fig.update_xaxes(tick0=0,dtick=0.5)
 fig.update_layout(
-    title="窓の熱貫流率と日射取得率",
+    title=f"WEP_Heating 地点｛select_location｝",
     xaxis_title="熱貫流率[W/㎡・K]",  
     yaxis_title="日射取得率[-]",
    width=700,
@@ -47,7 +47,7 @@ fig.update_yaxes(tick0=0,dtick=0.1)
 fig.update_xaxes(range=(0,6.0+0.11))
 fig.update_xaxes(tick0=0,dtick=0.5)
 fig.update_layout(
-    title="窓の熱貫流率と日射取得率",
+    title=f"WEP_Cooling 地点｛select_location｝",
     xaxis_title="熱貫流率[W/㎡・K]",  
     yaxis_title="日射取得率[-]",
    width=700,
