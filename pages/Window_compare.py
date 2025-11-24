@@ -111,7 +111,7 @@ with col_1:
     
     
 
-    st.bar_chart(Hdf1,color=color_2)
+    st.bar_chart(Hdf1,x=0,y=5,color=color_2)
 with col_2:
     
     
