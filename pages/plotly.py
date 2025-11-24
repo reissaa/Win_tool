@@ -53,3 +53,6 @@ fig.update_layout(
     
 )
 st.plotly_chart(fig)
+ax = S_df.plot.scatter(x="熱貫流率", y="日射熱取得率",
+                     c="WEP_H", colormap="cool")
+st.pyplot(ax.figure)
