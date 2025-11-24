@@ -111,11 +111,11 @@ with col_1:
     
     
 
-    st.bar_chart(Hdf1,x=Hdf1[index],y=Hdf1[f'{Win1}'])
+    st.bar_chart(Hdf1,x=Hdf1.index,y=Hdf1[f'{Win1}'])
 with col_2:
     
     
     
 
-    st.bar_chart(Hdf2,x=Hdf2[index],y=Hdf2[f'{Win2}'])
+    st.bar_chart(Hdf2,x=Hdf2.index,y=Hdf2[f'{Win2}'])
 
