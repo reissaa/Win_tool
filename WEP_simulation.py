@@ -94,7 +94,7 @@ df.columns=['WEPH[kW]','WEPC[kW]']
 df.index=(['S','E','N','W'])
 
 
-
+st.write(df)
 col_small, col_large = st.columns([1, 2])
 with col_small:
     
