@@ -110,7 +110,7 @@ with col_large:
     
 
     st.bar_chart(df,color=color_1,horizontal=True,use_container_width=True)
-    st.write(df)
+    st.write(df.T)
 
 
     
