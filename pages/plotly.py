@@ -65,3 +65,4 @@ ABC = st.multiselect(
     max_selections=2,
     )
 st.write(ABC[0])
+st.write(ABC[1])
