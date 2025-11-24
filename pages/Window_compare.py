@@ -101,3 +101,5 @@ Cdf=Cdf.T
 Cdf.columns=[f'{Win1}',f'{Win2}']
 Cdf.index=(['S','E','N','W'])
 st.write(Cdf)
+Hdf1=Hdf.iloc[:,0:1]
+st.write(Hdf1)
