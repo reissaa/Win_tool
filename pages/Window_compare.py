@@ -11,6 +11,7 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 import plotly.io as pio
 location=os.listdir(R'site_info/')
+st.title('南面のWEPの比較')
 select_location =st.sidebar.selectbox('地域を選択してください', location)
 df_0=pd.read_csv(R'Window_info/窓表作成.csv', header=0,sep=',',engine='python',encoding='cp932')
 
