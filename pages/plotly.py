@@ -37,7 +37,7 @@ dfS.reset_index(inplace=True, drop=True)
 dfS.columns=['WEP_H','WEP_C']
 S_df=pd.concat([Win_df,dfS],axis=1)
 
-fig = px.scatter(S_df,x=S_df['熱貫流率'],y=S_df['日射熱取得率'], hover_name='窓の種類',color='WEP_H',hover_data='熱貫流率')
+fig = px.scatter(S_df,x=S_df['熱貫流率'],y=S_df['日射熱取得率'], hover_name='窓の種類',color='WEP_H',hover_data='熱貫流率',color_continuous_scale=['red'])
 fig.update_yaxes(range=(0,1))
 fig.update_yaxes(tick0=0,dtick=0.1)
 fig.update_xaxes(range=(0,6.0+0.11))
@@ -52,7 +52,3 @@ fig.update_layout(
                 color='grey'),
     
 )
-st.plotly_chart(fig)
-ax = S_df.plot.scatter(x="熱貫流率", y="日射熱取得率",
-                     c="WEP_H", colormap="cool")
-st.pyplot(ax.figure)
