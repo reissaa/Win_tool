@@ -15,7 +15,7 @@ fig.update_yaxes(tick0=0,dtick=0.1)
 fig.update_xaxes(range=(0,6.0+0.11))
 fig.update_xaxes(tick0=0,dtick=0.5)
 #st.plotly_chart(fig)
-selected_points = plotly_events(fig, click_event=True, hover_event=True)
+selected_points = plotly_events(fig, click_event=True, hover_event=True,key="event_page_plotly_selector")
 #selected_points = plotly_events(fig)
 
 # Can write inside of things using with!
