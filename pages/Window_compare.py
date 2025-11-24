@@ -119,3 +119,14 @@ ResultH=pd.concat([ResultH1,ResultH2],axis=0)
 st.title('WEP_Hの比較')
 fig = px.bar(ResultH, x='方位', y='WEP_H',color='Name', barmode='group')
 st.plotly_chart(fig)
+
+
+CW1=list(Cdf1[f'{Win1}'])
+CW2=list(Cdf2[f'{Win2}'])
+ResultC1=pd.DataFrame({'Name':Name1 , '方位':x,'WEP_C':CW1})
+ResultC2=pd.DataFrame({'Name':Name2 , '方位':x,'WEP_C':CW2})
+ResultC=pd.concat([ResultC1,ResultC2],axis=0)
+
+st.title('WEP_Cの比較')
+fig = px.bar(ResultC, x='方位', y='WEP_C',color='Name', barmode='group')
+st.plotly_chart(fig)
