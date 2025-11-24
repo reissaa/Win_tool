@@ -2,6 +2,7 @@ import streamlit as st
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from streamlit_plotly_events import plotly_events
+import pandas as pd
 Win_df=pd.read_csv(R'窓性能ラベル/窓表作成.csv', header=0,sep=',',engine='python',encoding='cp932')
 fig = make_subplots()
 fig.add_trace(go.Scattergl(x=Win_df['熱貫流率'], y=Win_df['日射熱取得率']))
