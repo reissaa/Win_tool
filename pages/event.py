@@ -13,12 +13,13 @@ fig.update_yaxes(range=(0,1))
 fig.update_yaxes(tick0=0,dtick=0.1)
 fig.update_xaxes(range=(0,6.0+0.11))
 fig.update_xaxes(tick0=0,dtick=0.5)
-st.plotly_chart(fig)
 fig.update_layout(
     title="東京　WEP の比較　方位S",
     xaxis_title="Energyplusによる負荷[kWh/年]",  
     yaxis_title="時刻別計算による負荷[kWh/年]"
 )
+st.plotly_chart(fig)
+
 #selected_points = plotly_events(fig, click_event=True, hover_event=True,key="event_page_plotly_selector")
 #st.write("選択された窓:", selected_points)
 #selected_points = plotly_events(fig)
