@@ -46,7 +46,10 @@ fig.update_layout(
     xaxis_title="熱貫流率[W/㎡・K]",  
     yaxis_title="日射取得率[-]",
    width=700,
-    height=500
+    height=500,
+    font=dict(size=26,
+                color='grey'),
+    
 )
 st.plotly_chart(fig)
 
