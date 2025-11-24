@@ -106,5 +106,5 @@ Hdf2=Hdf.iloc[:,1:2]
 st.write(Hdf1)
 st.write(Hdf2)
 
-st.bar_chart(Hdf1,color='crimson')
-st.bar_chart(Hdf2,color='crimson')
+st.bar_chart(Hdf1,color='red')
+st.bar_chart(Hdf2,color='red')
