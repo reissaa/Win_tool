@@ -117,5 +117,5 @@ with col_2:
     
     
 
-    st.bar_chart(Hdf2,x=Hdf2[index],y=Hdf2[f'{Win2}]')
+    st.bar_chart(Hdf2,x=Hdf2[index],y=Hdf2[f'{Win2}'])
 
