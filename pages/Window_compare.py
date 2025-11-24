@@ -68,8 +68,8 @@ ABC = st.multiselect(
     [],
     max_selections=2,
     )
-st.write(ABC[0])
-st.write(ABC[1])
+st.write(f'窓1{ABC[0]}')
+st.write(f'窓2{ABC[1]}')
 Win1=ABC[0]
 Win2=ABC[1]
 WEP_ResultH=np.empty([2,4])
