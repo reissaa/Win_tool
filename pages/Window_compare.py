@@ -103,6 +103,8 @@ Cdf.index=(['S','E','N','W'])
 #st.write(Cdf)
 Hdf1=Hdf.iloc[:,0:1]
 Hdf2=Hdf.iloc[:,1:2]
+Cdf1=Cdf.iloc[:,0:1]
+Cdf2=Cdf.iloc[:,1:2]
 #st.write(Hdf1)
 #st.write(Hdf2)
 
