@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from streamlit_plotly_events import plotly_events
-Win_df=pd.read_csv('窓性能ラベル/窓表作成.csv', header=0,sep=',',engine='python')
+Win_df=pd.read_csv(R'窓性能ラベル/窓表作成.csv', header=0,sep=',',engine='python')
 # Writes a component similar to st.write()
 
 fig = px.scatter(Win_df, x="熱貫流率", y="日射熱取得率")
