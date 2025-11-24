@@ -3,11 +3,10 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from streamlit_plotly_events import plotly_events
-df_S=pd.read_csv('WEP_Result47_4dir/TOKYO/direct_select/S/WEP_Result_TOKYO_S.csv', header=0,sep=',',engine='python')
+Win_df=pd.read_csv('窓性能ラベル/窓表作成.csv', header=0,sep=',',engine='python')
 # Writes a component similar to st.write()
-df_S=df_S.T
-df_S.columns=['WEP_H','WEP_C']
-fig = px.scatter(df_S)
+
+fig = px.scatter(Win_df, x="熱貫流率", y="日射熱取得率")
 selected_points = plotly_events(fig)
 
 # Can write inside of things using with!
