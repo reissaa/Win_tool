@@ -67,12 +67,5 @@ with col2:
     st.image(img4)
  
     
-st.subheader('窓の性能比較📋')
-ABC = st.multiselect(
-    'Please select',
-    win_name,
-    [],
-    max_selections=2,
-    )
-st.write(ABC)
+
 
