@@ -17,7 +17,10 @@ df_0=pd.read_csv(R'Window_info/窓表作成.csv', header=0,sep=',',engine='pytho
 
 win_name=list(df_0['窓の種類'])
 Win_df=pd.read_csv(R'窓性能ラベル/窓表作成.csv', header=0,sep=',',engine='python',encoding='cp932')
-
+df_S=pd.read_csv(f'WEP_Result47_4dir/{select_location}/direct_select/S/WEP_Result_{select_location}_S.csv', header=0,sep=',',engine='python')
+df_E=pd.read_csv(f'WEP_Result47_4dir/{select_location}/direct_select/E/WEP_Result_{select_location}_E.csv', header=0,sep=',',engine='python')
+df_N=pd.read_csv(f'WEP_Result47_4dir/{select_location}/direct_select/N/WEP_Result_{select_location}_N.csv', header=0,sep=',',engine='python')
+df_W=pd.read_csv(f'WEP_Result47_4dir/{select_location}/direct_select/W/WEP_Result_{select_location}_W.csv', header=0,sep=',',engine='python')
 
 dfS=pd.read_csv(f'WEP_Result47_4dir/{select_location}/direct_select/S/WEP_Result_{select_location}_S.csv', header=0,sep=',',engine='python')
 dfS=dfS.T
@@ -67,3 +70,19 @@ ABC = st.multiselect(
     )
 st.write(ABC[0])
 st.write(ABC[1])
+Win1=ABC[0]
+Win2=ABC[1]
+WEP_ResultH=np.empty([2,4])
+WEP_ResultH[0][0]=df_S[f'{Win1}'][0]
+WEP_ResultH[1][0]=df_S[f'{Win2}'][0]
+WEP_ResultH[0][1]=df_E[f'{Win1}'][0]
+WEP_ResultH[1][1]=df_E[f'{Win2}'][0]
+WEP_ResultH[0][2]=df_N[f'{Win1}'][0]
+WEP_ResultH[1][2]=df_N[f'{Win2}'][0]
+WEP_ResultH[0][3]=df_W[f'{Win1}'][0]
+WEP_ResultH[1][3]=df_W[f'{Win2}'][0]
+Hdf=pd.DataFrame(WEP_ResultH)
+Hdf=Hdf.T
+Hdf.columns=[f'{Win1}',f'{Win2}']
+Hdf.index=(['S','E','N','W'])
+st.write(Hdf)
