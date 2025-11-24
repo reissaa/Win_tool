@@ -105,3 +105,5 @@ Hdf1=Hdf.iloc[:,0:1]
 Hdf2=Hdf.iloc[:,1:2]
 st.write(Hdf1)
 st.write(Hdf2)
+ st.bar_chart(Hdf1,color=color_1,horizontal=True,use_container_width=True)
+ st.bar_chart(Hdf2,color=color_1,horizontal=True,use_container_width=True)
