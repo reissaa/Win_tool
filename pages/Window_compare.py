@@ -60,7 +60,7 @@ fig.update_layout(
 st.plotly_chart(fig)
 st.subheader('窓の性能比較📋')
 ABC = st.multiselect(
-    'Please select',
+    ',窓を2つ選択してください',
     win_name,
     [],
     max_selections=2,
