@@ -116,13 +116,6 @@ ResultH1=pd.DataFrame({'Name':Name1 , '方位':x,'WEP_H':y1})
 ResultH2=pd.DataFrame({'Name':Name2 , '方位':x,'WEP_H':y2})
 ResultH=pd.concat([ResultH1,ResultH2],axis=0)
 st.write(ResultH)
-fig.update_layout(
-    title="WEP_Hの比較",
-   width=700,
-    height=500,
-    font=dict(size=26,
-                color='grey'),
-    
-)
+st.write('WEP_Hの比較')
 fig = px.bar(ResultH, x='方位', y='WEP_H',color='Name', barmode='group')
 st.plotly_chart(fig)
