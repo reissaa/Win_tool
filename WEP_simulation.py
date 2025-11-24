@@ -94,7 +94,7 @@ df.columns=['WEPH[kW]','WEPC[kW]']
 df.index=(['S','E','N','W'])
 
 
-st.write(df)
+
 col_small, col_large = st.columns([1, 2])
 with col_small:
     
@@ -110,11 +110,9 @@ with col_large:
     
 
     st.bar_chart(df,color=color_1,horizontal=True,use_container_width=True)
+    st.write(df)
 
 
-
-folium.Marker(point,popup=site,icon=folium.Icon(color='red')).add_to(map)
-folium_static(map)
     
     
 
