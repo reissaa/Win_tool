@@ -33,7 +33,7 @@ fig.update_layout(
 st.plotly_chart(fig)
 dfS=pd.read_csv(f'WEP_Result47_4dir/{select_location}/direct_select/S/WEP_Result_{select_location}_S.csv', header=0,sep=',',engine='python')
 dfS=dfS.T
-dfS.columns=['WEP_H','WEP_C']
 dfS.reset_index(drop=True)
+dfS.columns=['WEP_H','WEP_C']
 S_df=pd.concat([Win_df,dfS],axis=1)
 st.write(S_df)
