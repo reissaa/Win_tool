@@ -10,9 +10,9 @@ selected_points = plotly_events(fig)
 
 # Can write inside of things using with!
 #with st.expander('Plot'):
-    fig = px.line(x=[1], y=[1])
-    selected_points = plotly_events(fig, key="event_page_plotly_selector")
+    #fig = px.line(x=[1], y=[1])
+    #selected_points = plotly_events(fig, key="event_page_plotly_selector")
 
 # Select other Plotly events by specifying kwargs
 #fig = px.line(x=[1], y=[1])
-selected_points = plotly_events(fig, click_event=False, hover_event=True)
+#selected_points = plotly_events(fig, click_event=False, hover_event=True)
