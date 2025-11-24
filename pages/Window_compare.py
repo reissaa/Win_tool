@@ -112,8 +112,8 @@ y1=list(Hdf1[f'{Win1}'])
 y2=list(Hdf2[f'{Win2}'])
 Name1=[f'{Win1}',f'{Win1}',f'{Win1}',f'{Win1}']
 Name2=[f'{Win2}',f'{Win2}',f'{Win2}',f'{Win2}']
-ResultH1=pd.DataFrame({'Name':Name1 , '方位':x,'WEP＿H':y1})
-ResultH2=pd.DataFrame({'Name':Name2 , '方位':x,'WEP＿H':y2})
+ResultH1=pd.DataFrame({'Name':Name1 , '方位':x,'WEP_H':y1})
+ResultH2=pd.DataFrame({'Name':Name2 , '方位':x,'WEP_H':y2})
 ResultH=pd.concat([ResultH1,ResultH2],axis=0)
 st.write(ResultH)
 fig = px.bar(ResultH, x='方位', y='WEP_H', 
