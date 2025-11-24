@@ -52,3 +52,4 @@ fig.update_layout(
                 color='grey'),
     
 )
+st.plotly_chart(fig)
