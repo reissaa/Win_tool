@@ -128,5 +128,5 @@ ResultC2=pd.DataFrame({'Name':Name2 , '方位':x,'WEP_C':CW2})
 ResultC=pd.concat([ResultC1,ResultC2],axis=0)
 
 st.title('WEP_Cの比較')
-fig = px.bar(ResultC, x='方位', y='WEP_C',color='Name', barmode='group')
-st.plotly_chart(fig)
+fig2 = px.bar(ResultC, x='方位', y='WEP_C',color='Name', barmode='group')
+st.plotly_chart(fig2)
