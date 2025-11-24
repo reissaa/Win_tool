@@ -116,5 +116,5 @@ ResultH1=pd.DataFrame({'Name':Name1 , '方位':x,'WEP＿H':y1})
 ResultH2=pd.DataFrame({'Name':Name2 , '方位':x,'WEP＿H':y2})
 ResultH=pd.concat([ResultH1,ResultH2],axis=0)
 st.write(ResultH)
-fig = px.bar(ResultH, x='方位', y='WEPH', 
+fig = px.bar(ResultH, x='方位', y='WEP_H', 
              color='name', barmode='group')
