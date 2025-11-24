@@ -105,17 +105,9 @@ Hdf1=Hdf.iloc[:,0:1]
 Hdf2=Hdf.iloc[:,1:2]
 st.write(Hdf1)
 st.write(Hdf2)
-col_1, col_2 = st.columns([1, 1])
-with col_1:
-    
-    
-    
 
-    st.bar_chart(Hdf1,x=Hdf1.index,y=Hdf1[f'{Win1}'])
-with col_2:
-    
-    
-    
-
-    st.bar_chart(Hdf2,x=Hdf2.index,y=Hdf2[f'{Win2}'])
-
+x=Hdf1.index
+y1=list(Hdf1[f'{Win1}'])
+y2=list(Hdf2[f'{Win2}'])
+fig = px.bar(x=x, y=[y1,y2],barmode='group')
+st.plotly_chart(fig)
