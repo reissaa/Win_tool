@@ -45,7 +45,8 @@ fig.update_layout(
     title="窓の熱貫流率と日射取得率",
     xaxis_title="熱貫流率[W/㎡・K]",  
     yaxis_title="日射取得率[-]",
-    margin=dict(t=0, b=20, l=30, r=40)
+   width=700,
+    height=500
 )
 st.plotly_chart(fig)
 
