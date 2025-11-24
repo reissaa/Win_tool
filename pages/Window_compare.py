@@ -85,7 +85,7 @@ Hdf=pd.DataFrame(WEP_ResultH)
 Hdf=Hdf.T
 Hdf.columns=[f'{Win1}',f'{Win2}']
 Hdf.index=(['S','E','N','W'])
-st.write(Hdf)
+#st.write(Hdf)
 
 WEP_ResultC=np.empty([2,4])
 WEP_ResultC[0][0]=df_S[f'{Win1}'][1]
@@ -100,11 +100,11 @@ Cdf=pd.DataFrame(WEP_ResultC)
 Cdf=Cdf.T
 Cdf.columns=[f'{Win1}',f'{Win2}']
 Cdf.index=(['S','E','N','W'])
-st.write(Cdf)
+#st.write(Cdf)
 Hdf1=Hdf.iloc[:,0:1]
 Hdf2=Hdf.iloc[:,1:2]
-st.write(Hdf1)
-st.write(Hdf2)
+#st.write(Hdf1)
+#st.write(Hdf2)
 
 
 x=list(Hdf1.index)
@@ -115,7 +115,7 @@ Name2=[f'{Win2}',f'{Win2}',f'{Win2}',f'{Win2}']
 ResultH1=pd.DataFrame({'Name':Name1 , '方位':x,'WEP_H':y1})
 ResultH2=pd.DataFrame({'Name':Name2 , '方位':x,'WEP_H':y2})
 ResultH=pd.concat([ResultH1,ResultH2],axis=0)
-st.write(ResultH)
+#st.write(ResultH)
 st.title('WEP_Hの比較')
 fig = px.bar(ResultH, x='方位', y='WEP_H',color='Name', barmode='group')
 st.plotly_chart(fig)
