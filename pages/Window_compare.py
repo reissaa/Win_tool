@@ -107,8 +107,12 @@ st.write(Hdf1)
 st.write(Hdf2)
 
 
-x=Hdf1.index
+x=list(Hdf1.index)
 y1=list(Hdf1[f'{Win1}'])
 y2=list(Hdf2[f'{Win2}'])
-fig = px.bar(x=x, y=[y1,y2],barmode='group',name=[f'{Win1}',f'{Win2}'])
-st.plotly_chart(fig)
+Name1=[f'{Win1}'*4]
+Name2=[f'{Win2}'*4]
+ResultH1＝pd.DataFrame({'Name':Name1 , '方位':x,'WEP＿H':y1})
+ResultH2＝pd.DataFrame({'Name':Name2 , '方位':x,'WEP＿H':y2})
+ResultH=pd.concat([ResultH1,ResultH2],axis=0)
+st.write(ResultH)
