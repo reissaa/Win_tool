@@ -14,9 +14,9 @@ fig.update_yaxes(tick0=0,dtick=0.1)
 fig.update_xaxes(range=(0,6.0+0.11))
 fig.update_xaxes(tick0=0,dtick=0.5)
 fig.update_layout(
-    title="東京　WEP の比較　方位S",
-    xaxis_title="Energyplusによる負荷[kWh/年]",  
-    yaxis_title="時刻別計算による負荷[kWh/年]"
+    title="窓の熱貫流率と日射取得率",
+    xaxis_title="熱貫流率[W/㎡・K]",  
+    yaxis_title="日射取得率[-]"
 )
 st.plotly_chart(fig)
 
