@@ -113,10 +113,10 @@ with col_large:
     st.write(df)
 
 
-st.write('**省エネ基準との比較<WEP_H>')
+st.write('省エネ基準との比較<WEP_H>')
 
 
-st.write('*省エネ基準との比較<WEP_C>')
+st.write('省エネ基準との比較<WEP_C>')
 
 
 
