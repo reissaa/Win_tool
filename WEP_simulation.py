@@ -111,10 +111,31 @@ with col_large:
 
     st.bar_chart(df,color=color_1,horizontal=True,use_container_width=True)
     st.write(df)
-
+WEP_ResultH=np.empty([2,4])
+WEP_ResultH[0][0]=df_S[f'{select_winodow_s}'][0]
+WEP_ResultH[1][0]=df_S['FL3+A6+FL3(3.3)'][0]
+WEP_ResultH[0][1]=df_E[f'{select_winodow_e}'][0]
+WEP_ResultH[1][1]=df_E['FL3+A6+FL3(3.3)'][0]
+WEP_ResultH[0][2]=df_N[f'{select_winodow_n}'][0]
+WEP_ResultH[1][2]=df_N['FL3+A6+FL3(3.3)'][0]
+WEP_ResultH[0][3]=df_W[f'{select_winodow_w}'][0]
+WEP_ResultH[1][3]=df_W['FL3+A6+FL3(3.3)'][0]
+Hdf=pd.DataFrame(WEP_ResultH)
+Hdf=Hdf.T
+Hdf.columns=[f'{Win1}','FL3+A6+FL3(3.3)']
+Hdf.index=(['S','E','N','W'])
+x=list(Hdf1.index)
+y1=list(Hdf1[f'{Win1}'])
+y2=list(Hdf2[f'FL3+A6+FL3(3.3)'])
+Name1=[f'{Win1}',f'{Win1}',f'{Win1}',f'{Win1}']
+Name2=[f'FL3+A6+FL3(3.3)',f'FL3+A6+FL3(3.3)',f'FL3+A6+FL3(3.3)',f'FL3+A6+FL3(3.3)']
+ResultH1=pd.DataFrame({'Name':Name1 , '方位':x,'WEP_H':y1})
+ResultH2=pd.DataFrame({'Name':Name2 , '方位':x,'WEP_H':y2})
+ResultH=pd.concat([ResultH1,ResultH2],axis=0)
 
 st.write('省エネ基準との比較<WEP_H>')
-
+fig = px.bar(ResultH, x='方位', y='WEP_H',color='Name', barmode='group')
+st.plotly_chart(fig)
 
 st.write('省エネ基準との比較<WEP_C>')
 
