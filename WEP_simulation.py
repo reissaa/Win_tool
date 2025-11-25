@@ -122,7 +122,7 @@ WEP_ResultH[0][3]=df_W[f'{select_winodow_w}'][0]
 WEP_ResultH[1][3]=df_W['FL3+A6+FL3(3.3)'][0]
 Hdf=pd.DataFrame(WEP_ResultH)
 Hdf=Hdf.T
-Hdf.columns=['選択した窓','FL3+A6+FL3(3.3)']
+Hdf.columns=['選択した窓','省エネ基準相当の窓']
 Hdf.index=(['S','E','N','W'])
 Hdf1=Hdf.iloc[:,0:1]
 Hdf2=Hdf.iloc[:,1:2]
@@ -130,7 +130,7 @@ x=list(Hdf1.index)
 y1=list(Hdf1['選択した窓'])
 y2=list(Hdf2[f'FL3+A6+FL3(3.3)'])
 Name1=['選択した窓','選択した窓','選択した窓','選択した窓']
-Name2=[f'FL3+A6+FL3(3.3)',f'FL3+A6+FL3(3.3)',f'FL3+A6+FL3(3.3)',f'FL3+A6+FL3(3.3)']
+Name2=['省エネ基準相当の窓','省エネ基準相当の窓','省エネ基準相当の窓','省エネ基準相当の窓']
 ResultH1=pd.DataFrame({'Name':Name1 , '方位':x,'WEP_H':y1})
 ResultH2=pd.DataFrame({'Name':Name2 , '方位':x,'WEP_H':y2})
 ResultH=pd.concat([ResultH1,ResultH2],axis=0)
