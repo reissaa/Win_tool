@@ -135,11 +135,32 @@ ResultH1=pd.DataFrame({'Name':Name1 , '方位':x,'WEP_H':y1})
 ResultH2=pd.DataFrame({'Name':Name2 , '方位':x,'WEP_H':y2})
 ResultH=pd.concat([ResultH1,ResultH2],axis=0)
 
+WEP_ResultC=np.empty([2,4])
+WEP_ResultC[0][0]=df_S[f'{select_winodow_s}'][1]
+WEP_ResultC[1][0]=df_S['FL3+A6+FL3(3.3)'][1]
+WEP_ResultC[0][1]=df_E[f'{select_winodow_e}'][1]
+WEP_ResultC[1][1]=df_E['FL3+A6+FL3(3.3)'][1]
+WEP_ResultC[0][2]=df_N[f'{select_winodow_n}'][1]
+WEP_ResultC[1][2]=df_N['FL3+A6+FL3(3.3)'][1]
+WEP_ResultC[0][3]=df_W[f'{select_winodow_w}'][1]
+WEP_ResultC[1][3]=df_W['FL3+A6+FL3(3.3)'][1]
+Cdf=pd.DataFrame(WEP_ResultC)
+Cdf=Cdf.T
+Cdf.columns=['選択した窓','省エネ基準相当の窓']
+Cdf.index=(['S','E','N','W'])
+Cdf1=Cdf.iloc[:,0:1]
+Cdf2=Cdf.iloc[:,1:2]
+CW1=list(Cdf1['選択した窓'])
+CW2=list(Cdf2['省エネ基準相当の窓'])
+ResultC1=pd.DataFrame({'Name':Name1 , '方位':x,'WEP_C':CW1})
+ResultC2=pd.DataFrame({'Name':Name2 , '方位':x,'WEP_C':CW2})
+ResultC=pd.concat([ResultC1,ResultC2],axis=0)
+
 st.write('省エネ基準との比較<WEP_H>')
 fig = px.bar(ResultH, x='方位', y='WEP_H',color='Name', barmode='group')
 st.plotly_chart(fig)
 
 st.write('省エネ基準との比較<WEP_C>')
-
-
+fig = px.bar(ResultC, x='方位', y='WEP_C',color='Name', barmode='group')
+st.plotly_chart(fig)
 
