@@ -113,8 +113,10 @@ with col_large:
     st.write(df)
 
 
-    
-    
+st.title('省エネ基準との比較<WEP_H>')
+
+
+st.title('省エネ基準との比較<WEP_C>')
 
 
 
