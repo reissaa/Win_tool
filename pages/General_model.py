@@ -27,7 +27,7 @@ AREA=area_data[f'{site}'][0]
 Rad_AREA=area_data[f'{site}'][1]
 st.header(f"気候区分：{AREA}・日射区分:{Rad_AREA}")
 map = folium.Map(location=point,zoom_start=4.7)
-st.write(area_data.columns)
+
 col1, col2 = st.columns(2)
 img1=Image.open(Rf'site_info/{site}/暖冷房期間({site}).png')
 with col1:
