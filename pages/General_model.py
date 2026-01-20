@@ -22,7 +22,7 @@ select_location =st.selectbox('地域を選択してください:',location)
 point_data=pd.read_csv(Rf'site_data/地点の緯度経度.csv',index_col=None, header=0,sep=',',engine='python')
 site=str(select_location)
 point=list(point_data[site])
-area_data=pd.read_csv(Rf'site_data/省エネ区分・日射区分(47site.ver).csv',index_col=None, header=0,sep=',',engine='python')
+area_data=pd.read_csv(Rf'site_data/省エネ区分・日射区分(47site.ver).csv',index_col=None, header=0,sep=',',engine='python',encoding='shift_jis')
 AREA=area_data[f'{site}'][0]
 Rad_AREA=area_data[f'{site}'][1]
 st.header(f"気候区分：{AREA}・日射区分:{Rad_AREA}")
